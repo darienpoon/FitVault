@@ -67,3 +67,4 @@ FitVault presents an elegant solution to these wardrobe woes. The user-friendly 
 - Express
 - PostgreSQL
 - OpenAI API
+- CSS
