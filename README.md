@@ -36,11 +36,13 @@ FitVault presents an elegant solution to these wardrobe woes. The user-friendly 
 
 ## Getting Started
 1. Clone this repository: `git clone https://github.com/your-username/fitvault.git`
-2. Install the required dependencies: `npm install`
+2. Install the required dependencies inside client/server: `npm install`
 3. Start the frontend, cd into client directory: `npm run dev`
 4. Start the backend, cd into server directory: `npm run server-dev`
-5. Make copy of example.env file inside server directory, then fill in db username, and openAI API key.
-6. Open your browser and go to `http://localhost:3000`
+5. Access postgres database for vault:
+`psql -h localhost -U username -d vault`
+6. Make copy of example.env file inside server directory, then fill in postgres db username, and openAI API key.
+7. Open your browser and go to `http://localhost:3000`
 
 ## Usage
 1. Sign up for a free FitVault account (In progress)
