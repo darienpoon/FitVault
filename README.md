@@ -1,4 +1,4 @@
-# 🔥🔥🔥 FitVault: Your Ultimate Digital Closet Manager 🔥🔥🔥
+# 🔥 FitVault: Your Ultimate Digital Closet Manager 🔥
 
 Full stack closet management application integrated with AI style advisor 🕴️👜🧥👚👔👖👟
 ##
