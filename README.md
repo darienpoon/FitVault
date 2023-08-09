@@ -3,6 +3,8 @@
 Full stack closet management application integrated with AI style advisor 🕴️👜🧥👚👔👖👟
 ##
 ![mvp-initial-demo-darien-poon_AdobeExpress_AdobeExpress_AdobeExpress (1)](https://github.com/darienpoon/FitVault/assets/127794749/e52d0d7b-83ec-4f79-81a6-6e78518e9ec5)
+![FitVaultDemo](https://github.com/darienpoon/FitVault/assets/127794749/b327c8c2-ead5-4f3a-812a-c9bf979fe8ae)
+
 
 
 
@@ -53,9 +55,6 @@ FitVault presents an elegant solution to these wardrobe woes. The user-friendly 
 ![VaultBotPrompt](https://github.com/darienpoon/FitVault/assets/127794749/ebb65aa6-b1ad-40e4-91ef-37e4bb169e85)
 ![VaultBotResponse](https://github.com/darienpoon/FitVault/assets/127794749/02245d41-9556-416d-819b-2f8768d9cc77)
 ![VaultList](https://github.com/darienpoon/FitVault/assets/127794749/62d18ad5-9063-4e23-9b09-cde201132398)
-
-
-
 
 
 
