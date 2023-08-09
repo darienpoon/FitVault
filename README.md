@@ -39,7 +39,8 @@ FitVault presents an elegant solution to these wardrobe woes. The user-friendly 
 2. Install the required dependencies: `npm install`
 3. Start the frontend, cd into client directory: `npm run dev`
 4. Start the backend, cd into server directory: `npm run server-dev`
-5. Open your browser and go to `http://localhost:3000`
+5. Make copy of example.env file inside server directory, then fill in db username, and openAI API key.
+6. Open your browser and go to `http://localhost:3000`
 
 ## Usage
 1. Sign up for a free FitVault account (In progress)
