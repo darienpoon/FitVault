@@ -62,7 +62,7 @@ function App() {
     // Simulate loading process
     setTimeout(() => {
       setLoading(false);
-    }, 1000); // Set the loading state to false after 1 second
+    }, 3800); // Set the loading state to false after 1 second
     loadCloset();
   }, []);
 
@@ -203,7 +203,7 @@ function App() {
       <img src={logo} className="logo react" alt="Main logo" />
     </a> */}
       <div className="splash">
-        <h1>VAULT</h1>
+        <h1>FITVAULT</h1>
       </div>
     </div>)}
 
@@ -215,10 +215,13 @@ function App() {
             <img src={logo} className="logo react" alt="Main logo" />
           </a>
         </div> */}
-        <h1 className="home">
+        <div className="page-content-wrapper">
+          <div className="home">
+        <h1 >
           <span className = "homeLogo" onClick={handleHomeClick}>FITVAULT</span>
         </h1>
         <hr></hr>
+        </div>
         <div>
           <button className="button" onClick={openModal}>
             ADD ITEM
@@ -252,7 +255,8 @@ function App() {
         />
         <br></br> <hr></hr>
           {/* Add the button to show/hide the AllCloset/SearchClosetPieces components */}
-          <div>
+            <div className="vault-display" >
+              <div >
             <button className="button" onClick={handleShowAllCloset}>
               {searchedClosetData.length === 0
                 ? showAllCloset
@@ -282,8 +286,11 @@ function App() {
         )}
 
         <br></br> <hr></hr>
+        </div>
+        </div>
       </>
     )}
+
     </>
   );
 }

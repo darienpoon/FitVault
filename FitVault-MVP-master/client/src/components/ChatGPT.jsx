@@ -57,6 +57,7 @@ const ChatGPT = ({closetData}) => {
       ):
 
       chatIsLoading ? ( <>
+      <br></br>
         <a href="http://localhost:3000/" target="_blank">
         <img src={logo} className="logo react" alt="Main logo" />
       </a> <h4>VAULT is brainstorming...</h4> </>

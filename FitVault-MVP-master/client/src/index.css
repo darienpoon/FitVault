@@ -1,8 +1,17 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
+  width: 100%;
   margin: 0 auto;
   padding: 0rem;
   text-align: center;
+
+  /* min-height: 100vh;
+  background-image: url("./assets/space.png");
+  background-position-x: 50%; */
+
+  background: linear-gradient(#ffffff, rgb(230, 230, 230));
+  background-size:auto;
+
 }
 
 :root {
@@ -13,6 +22,7 @@
   color-scheme: light dark;
   color: rgba(7, 7, 7, 0.87);
   background-color: #ffffff;
+
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -27,14 +37,31 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100%;
+  background-image: url("./assets/tunnel.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
 
 .splash h1 {
   font-size: 48px;
 }
 
+.home{
+  height:fit-content;
+  width: 100%;
+  /* background-image: url("./assets/space.png");
+
+  background-position-y: 16%;
+  background-position-x: 50%; */
+
+}
+
 .homeLogo{
   cursor: pointer;
+  /* color: white; */
 }
 
 .logo {
@@ -42,6 +69,7 @@
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
+  vertical-align: middle;
 }
 
 .logo.react:hover {
@@ -78,6 +106,12 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+
+  background-image: url("./assets/space.png");
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center; /* Center the background image */
+  background-size:cover;
+
 }
 
 h1 {
@@ -126,6 +160,10 @@ button:focus-visible {
   /* align-items: center; */
   font-size: 12px;
   font-weight: bold;
+
+  background-image: url("./assets/space.png");
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  background-position: center; /* Center the background image */
 }
 
 .empty{
@@ -159,6 +197,8 @@ th {
 
 .carousel-container {
   display: flex;
+  background: linear-gradient(to bottom right, #ffffff, rgb(234, 229, 229));
+  max-width: 100%; /* Set a maximum width */
 }
 
 .carousel-image {
@@ -167,9 +207,17 @@ th {
   object-fit: cover;
 }
 
+.vault-display{
+  background: linear-gradient(to bottom right, #7a7777, rgb(193, 192, 192));
 
+}
 .chat{
-background-color: #ffffff;
+background: linear-gradient(to bottom right, #ffffff, rgb(143, 142, 142));
+
+/* background-image: url("./assets/space.png");
+background-repeat: no-repeat;
+background-position: center; */
+
 border: 1px solid rgb(167, 164, 164);
 border-radius: 5px;
 padding: 8px;
@@ -191,6 +239,8 @@ padding: 8px;
   width:1190px;
   padding: 15px 45px 15px 25px;
   font-size: 13px;
+  margin: 0 auto;
+
 }
 
 #chatResponseBody{
