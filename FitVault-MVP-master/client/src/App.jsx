@@ -7,6 +7,7 @@ import ClosetCarousel from './components/ClosetCarousel.jsx';
 import Modal from './components/Modal.jsx';
 import ChatGPT from './components/ChatGPT.jsx';
 import logo from './assets/logo.png';
+import NavigationBar from './components/NavigationBar.jsx';
 
 function App() {
   const [loading, setLoading] = useState(true); // State to manage the loading state
@@ -220,6 +221,8 @@ function App() {
         <h1 >
           <span className = "homeLogo" onClick={handleHomeClick}>FITVAULT</span>
         </h1>
+        <NavigationBar></NavigationBar>
+        <h5> Customized Closet Management Application with Integrated AI Style Advisor </h5>
         <hr></hr>
         </div>
         <div>
