@@ -37,6 +37,8 @@ FitVault presents an elegant solution to these wardrobe woes. The user-friendly 
 ## Getting Started
 1. Clone this repository: `git clone https://github.com/your-username/fitvault.git`
 2. Install the required dependencies inside client/server: `npm install`
+`npm install react-responsive react-modal`
+
 3. Start the frontend, cd into client directory: `npm run dev`
 4. Start the backend, cd into server directory: `npm run server-dev`
 5. Access postgres database for vault:

@@ -7,10 +7,16 @@ import ClosetCarousel from './components/ClosetCarousel.jsx';
 import Modal from './components/Modal.jsx';
 import ChatGPT from './components/ChatGPT.jsx';
 import logo from './assets/logo.png';
+
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import NavigationBar from './components/NavigationBar.jsx';
+import AboutUs from './components/NavComponents/AboutUs.jsx';
+import MyAccount from './components/NavComponents/MyAccount.jsx';
 
 function App() {
   const [loading, setLoading] = useState(true); // State to manage the loading state
+  const [onAbout,setOnAbout] =useState(false);
+  const [onMyAcc, setOnMyAcc] = useState(false);
   const [closetData, setClosetData] = useState([]);
   const [searchedClosetData, setSearchedClosetData] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -191,9 +197,18 @@ function App() {
     }
   };
 
+
   const handleHomeClick = () => {
+
     // Reload the page to initiate loadCloset and fetch the latest data
-    window.location.reload();
+    setOnAbout(false);
+    setOnMyAcc(false);
+    window.location.replace('/');
+
+  };
+
+  const handleAboutClick = () => {
+    setOnAbout(true); // Set onAbout to true when "About Us" is clicked
   };
 
   return (
@@ -209,7 +224,7 @@ function App() {
     </div>)}
 
     {/* Main content */}
-    {!loading && (
+    {(!loading && onAbout === false && onMyAcc === false) && (
       <>
         {/* <div>
           <a href="http://localhost:3000/" target="_blank">
@@ -219,10 +234,15 @@ function App() {
         <div className="page-content-wrapper">
           <div className="home">
         <h1 >
-          <span className = "homeLogo" onClick={handleHomeClick}>FITVAULT</span>
+          <span className = "homeLogo" onClick={handleHomeClick}> FITVAULT</span>
         </h1>
-        <NavigationBar></NavigationBar>
-        <h5> Customized Closet Management Application with Integrated AI Style Advisor </h5>
+        <Router>
+        <NavigationBar handleAboutClick={handleAboutClick} />
+         <Routes>
+           <Route path="/about" element={<AboutUs onAbout ={onAbout} />} />
+           <Route path="/myaccount" element={<MyAccount />} />
+        </Routes>
+         </Router>
         <hr></hr>
         </div>
         <div>
@@ -294,8 +314,34 @@ function App() {
       </>
     )}
 
+
+  {onAbout && (
+    <>
+    <div className="page-content-wrapper">
+          <div className="home">
+        <h1 >
+          <span className = "homeLogo" onClick={handleHomeClick}> FITVAULT</span>
+        </h1>
+        <Router>
+          <NavigationBar handleAboutClick={handleAboutClick}></NavigationBar>
+         {/* <Routes>
+           <Route path="/myaccount" element={<MyAccount />} />
+        </Routes> */}
+         </Router>
+         <h5> Customized Closet Management Application with Integrated AI Style Advisor </h5>
+        <hr></hr>
+        </div></div>
+
+    <AboutUs onAbout={onAbout}></AboutUs>
     </>
-  );
+    )
+  }
+
+
+
+
+    </>
+  )
 }
 
 export default App;
