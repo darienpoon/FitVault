@@ -5,16 +5,16 @@ import AboutUs from './NavComponents/AboutUs.jsx';
 import MyAccount from './NavComponents/MyAccount.jsx';
 
 
-const NavigationBar = ({handleAboutClick}) => {
+const NavigationBar = ({handleAboutClick, handleMyAccountClick}) => {
   return (
     <div className="navigation-container">
       <Link to="/about" className="nav-link" onClick={handleAboutClick}>
         <FaInfoCircle size={20} />
-        <span className="nav-text">ABOUT US</span>
+        <span className="nav-text">About Us</span>
       </Link>
-      <Link to="/myaccount" className="nav-link">
+      <Link to="/myaccount" className="nav-link" onClick={handleMyAccountClick}>
         <FaSignInAlt size={20} />
-        <span className="nav-text">MY ACCOUNT</span>
+        <span className="nav-text">My Account</span>
       </Link>
     </div>
   );

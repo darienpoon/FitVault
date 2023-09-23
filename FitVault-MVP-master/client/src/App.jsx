@@ -208,8 +208,15 @@ function App() {
   };
 
   const handleAboutClick = () => {
+    setOnMyAcc(false);
     setOnAbout(true); // Set onAbout to true when "About Us" is clicked
   };
+
+  const handleMyAccountClick = () => {
+    setOnAbout(false);
+    setOnMyAcc(true);
+
+  }
 
   return (
     <>
@@ -237,7 +244,7 @@ function App() {
           <span className = "homeLogo" onClick={handleHomeClick}> FITVAULT</span>
         </h1>
         <Router>
-        <NavigationBar handleAboutClick={handleAboutClick} />
+        <NavigationBar handleAboutClick={handleAboutClick} handleMyAccountClick={handleMyAccountClick} />
          <Routes>
            <Route path="/about" element={<AboutUs onAbout ={onAbout} />} />
            <Route path="/myaccount" element={<MyAccount />} />
@@ -322,17 +329,32 @@ function App() {
         <h1 >
           <span className = "homeLogo" onClick={handleHomeClick}> FITVAULT</span>
         </h1>
-        <Router>
-          <NavigationBar handleAboutClick={handleAboutClick}></NavigationBar>
-         {/* <Routes>
-           <Route path="/myaccount" element={<MyAccount />} />
-        </Routes> */}
-         </Router>
          <h5> Customized Closet Management Application with Integrated AI Style Advisor </h5>
+        <Router>
+          <NavigationBar handleMyAccountClick={handleMyAccountClick}></NavigationBar>
+         </Router>
         <hr></hr>
         </div></div>
 
     <AboutUs onAbout={onAbout}></AboutUs>
+    </>
+    )
+  }
+
+{onMyAcc && (
+    <>
+    <div className="page-content-wrapper">
+          <div className="home">
+        <h1 >
+          <span className = "homeLogo" onClick={handleHomeClick}> FITVAULT</span>
+        </h1>
+        <Router>
+          <NavigationBar handleAboutClick={handleAboutClick}></NavigationBar>
+         </Router>
+        <hr></hr>
+        </div></div>
+
+    <MyAccount onMyAcc ={onMyAcc}> </MyAccount>
     </>
     )
   }
